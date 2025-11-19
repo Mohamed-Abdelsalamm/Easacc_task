@@ -21,18 +21,14 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     return AppBar(
       title: Text(title),
-      centerTitle: centerTitle ,
+      centerTitle: centerTitle,
       actionsPadding: EdgeInsets.symmetric(horizontal: 8.w),
       leading: haveArrowBack ? CustomArrowBack() : null,
-      elevation: 0, 
+      elevation: 0,
       actions: actions,
       bottom: PreferredSize(
         preferredSize: const Size.fromHeight(1),
-        child: Divider(
-          height: 1,
-          thickness: 1,
-          color: AppColors.neutral50,
-        ),
+        child: Divider(height: 1, thickness: 1, color: AppColors.neutral50),
       ),
     );
   }

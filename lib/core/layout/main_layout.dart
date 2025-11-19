@@ -50,7 +50,7 @@ class _MainLayoutState extends State<MainLayout> {
         context.go(AppRoutes.kHomeView);
         break;
       case 1:
-        context.go(AppRoutes.kHomeView);
+        context.go(AppRoutes.kSetLinkView);
         break;
       case 2:
         context.go(AppRoutes.kHomeView);
@@ -103,7 +103,7 @@ class _MainLayoutState extends State<MainLayout> {
                   Assets.assetsImagesSvgsTicket02Active,
                   width: 24.r,
                 ),
-                label: S.current.home,
+                label: S.current.setLink,
               ),
               BottomNavigationBarItem(
                 icon: SvgPicture.asset(

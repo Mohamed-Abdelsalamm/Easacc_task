@@ -53,5 +53,6 @@
     "confirmPasswordRequired": "Confirm Password is required",
     "passwordsDoNotMatch": "Passwords do not match",
     "countryValidationError": "Please enter your country",
-    "or": "or"
+    "or": "or",
+    "setLink": "Set Link"
 }

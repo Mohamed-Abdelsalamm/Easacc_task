@@ -103,6 +103,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "retry": MessageLookupByLibrary.simpleMessage("إعادة المحاولة"),
         "sendTimeout": MessageLookupByLibrary.simpleMessage(
             "انتهت مهلة الإرسال مع خادم API"),
+        "setLink": MessageLookupByLibrary.simpleMessage("تعيين الرابط"),
         "shouldNotBeEmpty":
             MessageLookupByLibrary.simpleMessage("يجب ألا يكون فارغاً"),
         "termsAgreementPart1": MessageLookupByLibrary.simpleMessage(

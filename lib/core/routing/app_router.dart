@@ -23,7 +23,7 @@ abstract class AppRouter {
             final location = state.uri.path;
             if (location == AppRoutes.kHomeView) {
               currentIndex = 0;
-            } else if (location == AppRoutes.kHomeView) {
+            } else if (location == AppRoutes.kSetLinkView) {
               currentIndex = 1;
             } else if (location == AppRoutes.kHomeView) {
               currentIndex = 2;

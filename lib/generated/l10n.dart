@@ -599,6 +599,16 @@ class S {
       args: [],
     );
   }
+
+  /// `Set Link`
+  String get setLink {
+    return Intl.message(
+      'Set Link',
+      name: 'setLink',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

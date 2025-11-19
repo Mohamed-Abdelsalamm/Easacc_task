@@ -51,5 +51,6 @@
     "confirmPasswordRequired": "تأكيد كلمة المرور مطلوب",
     "passwordsDoNotMatch": "كلمات المرور غير متطابقة",
     "countryValidationError": "يرجى إدخال بلدك",
-    "or": "أو"
+    "or": "أو",
+    "setLink": "تعيين الرابط"
 }

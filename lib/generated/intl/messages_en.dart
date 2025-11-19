@@ -106,6 +106,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "retry": MessageLookupByLibrary.simpleMessage("Retry"),
         "sendTimeout":
             MessageLookupByLibrary.simpleMessage("Send timeout with ApiServer"),
+        "setLink": MessageLookupByLibrary.simpleMessage("Set Link"),
         "shouldNotBeEmpty":
             MessageLookupByLibrary.simpleMessage("Should not be empty"),
         "termsAgreementPart1": MessageLookupByLibrary.simpleMessage(
