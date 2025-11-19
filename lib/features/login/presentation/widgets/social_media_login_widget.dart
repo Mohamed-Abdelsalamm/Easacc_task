@@ -1,7 +1,9 @@
 import 'package:easacc_flutter_task/core/utils/helper/spacing.dart';
+import 'package:easacc_flutter_task/features/login/presentation/manager/login_cubit.dart';
 import 'package:easacc_flutter_task/generated/assets.dart';
 import 'package:easacc_flutter_task/generated/l10n.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -14,7 +16,9 @@ class SocialMediaLoginWidget extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         _buildIconButton(
-          onPressed: () {},
+          onPressed: () {
+            context.read<LoginCubit>().loginWithGoogle();
+          },
           assetPath: Assets.assetsImagesSvgsGoogleIcon,
         ),
         horizontalSpace(30),
@@ -28,7 +32,9 @@ class SocialMediaLoginWidget extends StatelessWidget {
         ),
         horizontalSpace(20),
         _buildIconButton(
-          onPressed: () {},
+          onPressed: () {
+            context.read<LoginCubit>().loginWithFacebook();
+          },
           assetPath: Assets.assetsImagesSvgsFacebookLogin,
         ),
       ],

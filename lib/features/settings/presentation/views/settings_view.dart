@@ -1,17 +1,20 @@
 import 'package:easacc_flutter_task/core/components/customa_app_bar.dart';
 import 'package:easacc_flutter_task/core/cubits/language_cubit.dart';
+import 'package:easacc_flutter_task/core/di/service_locator.dart';
+import 'package:easacc_flutter_task/core/routing/app_routes.dart';
 import 'package:easacc_flutter_task/core/utils/helper/spacing.dart';
+import 'package:easacc_flutter_task/features/settings/presentation/manager/devices_cubit.dart';
+import 'package:easacc_flutter_task/features/settings/presentation/manager/set_link_cubit.dart';
+import 'package:easacc_flutter_task/features/settings/presentation/widgets/devices_section.dart';
+import 'package:easacc_flutter_task/features/settings/presentation/widgets/set_link_form.dart';
 import 'package:easacc_flutter_task/generated/assets.dart';
 import 'package:easacc_flutter_task/generated/l10n.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:easacc_flutter_task/core/di/service_locator.dart';
-import 'package:easacc_flutter_task/features/settings/presentation/manager/set_link_cubit.dart';
-import 'package:easacc_flutter_task/features/settings/presentation/manager/devices_cubit.dart';
-import 'package:easacc_flutter_task/features/settings/presentation/widgets/set_link_form.dart';
-import 'package:easacc_flutter_task/features/settings/presentation/widgets/devices_section.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart' show SvgPicture;
+import 'package:go_router/go_router.dart';
 
 class SettingsView extends StatelessWidget {
   const SettingsView({super.key});
@@ -26,6 +29,13 @@ class SettingsView extends StatelessWidget {
       child: Scaffold(
         appBar: CustomAppBar(
           title: S.of(context).settings,
+          customLeading: IconButton(
+            onPressed: () {
+             FirebaseAuth.instance.signOut();
+              context.go(AppRoutes.kLoginView);
+            },
+            icon: Icon(Icons.logout, size: 24.r, color: Colors.red),
+          ),
           haveArrowBack: false,
           actions: [
             IconButton(

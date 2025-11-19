@@ -17,16 +17,13 @@ class LoginButton extends StatelessWidget {
     return BlocConsumer<LoginCubit, LoginState>(
       listener: (context, state) {
         if (state is LoginSuccess) {
-          context.showCustomSnackBar(
-            state.loginResponse.message == "User successfully logged in"
-                ? S.current.loginSuccess
-                : S.current.loginFailed,
-          );
+          context.showCustomSnackBar(S.current.loginSuccess);
+          context.go(AppRoutes.kHomeView);
         } else if (state is LoginFailure) {
           context.showCustomSnackBar(
             state.errorMessage == "Invalid email or password"
                 ? S.current.invalidEmailOrPassword
-                : S.current.loginFailed,
+                : state.errorMessage,
           );
         }
       },

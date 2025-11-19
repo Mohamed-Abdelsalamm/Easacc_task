@@ -3,7 +3,9 @@ import 'package:easacc_flutter_task/core/di/service_locator.dart';
 import 'package:easacc_flutter_task/core/prefs/app_preferences.dart';
 import 'package:easacc_flutter_task/core/routing/app_router.dart';
 import 'package:easacc_flutter_task/core/theme/app_light_theme.dart';
+import 'package:easacc_flutter_task/firebase_options.dart';
 import 'package:easacc_flutter_task/generated/l10n.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -12,6 +14,12 @@ import 'package:go_router/go_router.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  
+  // Initialize Firebase
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+  
   await AppPreference.init();
   final router = await AppRouter.createRouter();
 

@@ -8,6 +8,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   final bool centerTitle;
   final List<Widget>? actions;
   final bool haveArrowBack;
+  final Widget? customLeading;
 
   const CustomAppBar({
     super.key,
@@ -15,6 +16,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
     this.centerTitle = true,
     this.actions,
     this.haveArrowBack = true,
+    this.customLeading,
   });
 
   @override
@@ -23,7 +25,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       title: Text(title),
       centerTitle: centerTitle,
       actionsPadding: EdgeInsets.symmetric(horizontal: 8.w),
-      leading: haveArrowBack ? CustomArrowBack() : null,
+      leading: customLeading ?? (haveArrowBack ? CustomArrowBack() : null),
       elevation: 0,
       actions: actions,
       bottom: PreferredSize(

@@ -2,6 +2,7 @@ import 'package:dio/dio.dart';
 import 'package:easacc_flutter_task/core/network/api_service.dart';
 import 'package:easacc_flutter_task/features/login/data/repo/login_repo.dart';
 import 'package:easacc_flutter_task/features/login/data/repo/login_repo_impl.dart';
+import 'package:easacc_flutter_task/features/login/data/services/social_auth_service.dart';
 import 'package:easacc_flutter_task/features/login/presentation/manager/login_cubit.dart';
 import 'package:easacc_flutter_task/features/settings/data/services/bluetooth_scanner.dart';
 import 'package:easacc_flutter_task/features/settings/data/services/mdns_scanner.dart';
@@ -30,7 +31,13 @@ void setupServiceLocator() {
     ),
   );
 
-  getIt.registerSingleton<LoginRepo>(LoginRepoImpl(getIt.get<ApiService>()));
+  getIt.registerLazySingleton<SocialAuthService>(() => SocialAuthService());
+  getIt.registerSingleton<LoginRepo>(
+    LoginRepoImpl(
+      getIt.get<ApiService>(),
+      getIt.get<SocialAuthService>(),
+    ),
+  );
   getIt.registerFactory<LoginCubit>(() => LoginCubit(getIt.get<LoginRepo>()));
   getIt.registerFactory<SetLinkCubit>(() => SetLinkCubit());
   getIt.registerLazySingleton<PermissionService>(() => PermissionService());

@@ -6,19 +6,14 @@ class BluetoothScanner {
   Future<List<DeviceItem>> scan() async {
     final devices = <DeviceItem>[];
 
-    // Check if Bluetooth is supported
     if (!await FlutterBluePlus.isSupported) return devices;
 
-    // Check if Bluetooth adapter is on
     final adapterState = await FlutterBluePlus.adapterState.first;
     if (adapterState != BluetoothAdapterState.on) {
-      // Try to turn on Bluetooth (on Android)
       try {
         await FlutterBluePlus.turnOn();
-        // Wait a moment for the adapter to turn on
         await Future.delayed(const Duration(seconds: 1));
       } catch (e) {
-        // If we can't turn on Bluetooth, return empty list
         return devices;
       }
     }
@@ -50,10 +45,9 @@ class BluetoothScanner {
 
       await FlutterBluePlus.startScan(timeout: const Duration(seconds: 6));
       
-      // Wait for scan to complete
       await Future.delayed(const Duration(seconds: 6));
     } catch (e) {
-      // Silently catch scanning errors
+      // Handle scan errors if necessary
     } finally {
       await FlutterBluePlus.stopScan();
       await sub?.cancel();
