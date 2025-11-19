@@ -1,9 +1,11 @@
 import 'package:dio/dio.dart';
-import 'package:easacc_flutter_task/core/di/navigator_service.dart';
 import 'package:easacc_flutter_task/core/network/api_service.dart';
 import 'package:easacc_flutter_task/features/login/data/repo/login_repo.dart';
 import 'package:easacc_flutter_task/features/login/data/repo/login_repo_impl.dart';
 import 'package:easacc_flutter_task/features/login/presentation/manager/login_cubit.dart';
+import 'package:easacc_flutter_task/features/settings/data/services/bluetooth_scanner.dart';
+import 'package:easacc_flutter_task/features/settings/data/services/mdns_scanner.dart';
+import 'package:easacc_flutter_task/features/settings/data/services/permission_service.dart';
 import 'package:easacc_flutter_task/features/settings/presentation/manager/set_link_cubit.dart';
 import 'package:easacc_flutter_task/features/settings/presentation/manager/devices_cubit.dart';
 import 'package:easacc_flutter_task/features/home/presentation/manager/home_cubit.dart';
@@ -28,11 +30,18 @@ void setupServiceLocator() {
     ),
   );
 
-  getIt.registerSingleton<NavigationService>(NavigationService());
-
   getIt.registerSingleton<LoginRepo>(LoginRepoImpl(getIt.get<ApiService>()));
   getIt.registerFactory<LoginCubit>(() => LoginCubit(getIt.get<LoginRepo>()));
   getIt.registerFactory<SetLinkCubit>(() => SetLinkCubit());
-  getIt.registerFactory<DevicesCubit>(() => DevicesCubit());
+  getIt.registerLazySingleton<PermissionService>(() => PermissionService());
+  getIt.registerLazySingleton<MdnsScanner>(() => MdnsScanner());
+  getIt.registerLazySingleton<BluetoothScanner>(() => BluetoothScanner());
+  getIt.registerFactory<DevicesCubit>(
+    () => DevicesCubit(
+      permissionService: getIt<PermissionService>(),
+      mdnsScanner: getIt<MdnsScanner>(),
+      bluetoothScanner: getIt<BluetoothScanner>(),
+    ),
+  );
   getIt.registerFactory<HomeCubit>(() => HomeCubit());
 }
