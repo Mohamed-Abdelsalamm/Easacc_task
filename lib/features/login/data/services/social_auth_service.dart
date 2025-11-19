@@ -43,6 +43,8 @@ class SocialAuthService {
 
   Future<Either<Failure, User>> signInWithFacebook() async {
     try {
+      await _facebookAuth.logOut();
+
       final LoginResult result = await _facebookAuth.login(
         permissions: ['email', 'public_profile'],
       );
@@ -67,6 +69,17 @@ class SocialAuthService {
           ServerFailure('Facebook sign-in failed: ${result.message}'),
         );
       }
+    } on FirebaseAuthException catch (e) {
+      if (e.code == 'invalid-credential') {
+        return Left(
+          ServerFailure(
+            'Invalid Facebook credentials. Please try again or contact support.',
+          ),
+        );
+      }
+      return Left(
+        ServerFailure('Facebook authentication failed: ${e.message}'),
+      );
     } catch (e) {
       return Left(ServerFailure('Facebook sign-in failed: ${e.toString()}'));
     }

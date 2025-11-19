@@ -20,6 +20,7 @@ class LoginButton extends StatelessWidget {
           context.showCustomSnackBar(S.current.loginSuccess);
           context.go(AppRoutes.kHomeView);
         } else if (state is LoginFailure) {
+          print(" Login Failure:===========? ${state.errorMessage} ");
           context.showCustomSnackBar(
             state.errorMessage == "Invalid email or password"
                 ? S.current.invalidEmailOrPassword
