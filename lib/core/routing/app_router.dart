@@ -2,7 +2,7 @@ import 'package:easacc_flutter_task/core/routing/app_routes.dart';
 import 'package:easacc_flutter_task/features/home/presentation/views/home_view.dart';
 import 'package:easacc_flutter_task/features/login/presentation/manager/login_cubit.dart';
 import 'package:easacc_flutter_task/features/login/presentation/views/login_view.dart';
-import 'package:easacc_flutter_task/features/set_link/presentation/views/set_link_view.dart';
+import 'package:easacc_flutter_task/features/settings/presentation/views/settings_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -24,7 +24,7 @@ abstract class AppRouter {
             final location = state.uri.path;
             if (location == AppRoutes.kHomeView) {
               currentIndex = 0;
-            } else if (location == AppRoutes.kSetLinkView) {
+            } else if (location == AppRoutes.kSettingsView) {
               currentIndex = 1;
             } else if (location == AppRoutes.kHomeView) {
               currentIndex = 2;
@@ -45,26 +45,16 @@ abstract class AppRouter {
               },
             ),
             GoRoute(
-              path: AppRoutes.kSetLinkView,
+              path: AppRoutes.kSettingsView,
               pageBuilder: (context, state) {
                 return CustomTransitionPage(
                   transitionsBuilder: (_, animation, __, child) {
                     return FadeTransition(opacity: animation, child: child);
                   },
                   key: state.pageKey,
-                  child: const SetLinkView(),
+                  child: const SettingsView(),
                 );
               },
-            ),
-            GoRoute(
-              path: AppRoutes.kHomeView,
-              pageBuilder: (context, state) => CustomTransitionPage(
-                transitionsBuilder: (_, animation, __, child) {
-                  return FadeTransition(opacity: animation, child: child);
-                },
-                key: state.pageKey,
-                child: const HomeView(),
-              ),
             ),
           ],
         ),

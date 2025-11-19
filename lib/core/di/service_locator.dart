@@ -4,7 +4,7 @@ import 'package:easacc_flutter_task/core/network/api_service.dart';
 import 'package:easacc_flutter_task/features/login/data/repo/login_repo.dart';
 import 'package:easacc_flutter_task/features/login/data/repo/login_repo_impl.dart';
 import 'package:easacc_flutter_task/features/login/presentation/manager/login_cubit.dart';
-import 'package:easacc_flutter_task/features/set_link/presentation/manager/set_link_cubit.dart';
+import 'package:easacc_flutter_task/features/settings/presentation/manager/set_link_cubit.dart';
 import 'package:easacc_flutter_task/features/home/presentation/manager/home_cubit.dart';
 import 'package:get_it/get_it.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';

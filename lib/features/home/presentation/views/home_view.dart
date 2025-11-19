@@ -36,7 +36,7 @@ class HomeView extends StatelessWidget {
                       ),
                       IconButton(
                         icon: const Icon(Icons.link),
-                        onPressed: () => context.go(AppRoutes.kSetLinkView),
+                        onPressed: () => context.go(AppRoutes.kSettingsView),
                       ),
                     ]
                   : null,
@@ -58,7 +58,7 @@ class HomeView extends StatelessWidget {
                         Text(S.of(context).noLinkConfigured),
                         verticalSpace(12),
                         CustomButton(
-                          onPressed: () => context.go(AppRoutes.kSetLinkView),
+                          onPressed: () => context.go(AppRoutes.kSettingsView),
                           title: S.of(context).setLink,
                         ),
                       ],

@@ -1,7 +1,7 @@
 import 'package:easacc_flutter_task/core/components/custom_button.dart';
 import 'package:easacc_flutter_task/core/components/custom_text_form_filed.dart';
-import 'package:easacc_flutter_task/core/components/customa_app_bar.dart';
 import 'package:easacc_flutter_task/core/prefs/app_preferences.dart';
+import 'package:easacc_flutter_task/core/routing/app_routes.dart';
 import 'package:easacc_flutter_task/core/utils/extensions/snack_bar_extension.dart';
 import 'package:easacc_flutter_task/core/utils/helper/spacing.dart';
 import 'package:easacc_flutter_task/core/utils/validator.dart';
@@ -12,7 +12,6 @@ import 'package:go_router/go_router.dart';
 
 import '../manager/set_link_cubit.dart';
 import '../manager/set_link_state.dart';
-import 'package:easacc_flutter_task/core/routing/app_routes.dart';
 
 class SetLinkForm extends StatefulWidget {
   const SetLinkForm({super.key});
@@ -44,12 +43,7 @@ class _SetLinkFormState extends State<SetLinkForm> {
       },
       builder: (context, state) {
         final isSaving = state is SetLinkLoading;
-        return Scaffold(
-          appBar: CustomAppBar(
-            title: S.of(context).setLink,
-            haveArrowBack: false,
-          ),
-          body: Padding(
+        return  Padding(
             padding: const EdgeInsets.all(16.0),
             child: Form(
               key: cubit.formKey,
@@ -78,8 +72,7 @@ class _SetLinkFormState extends State<SetLinkForm> {
                 ],
               ),
             ),
-          ),
-        );
+          );
       },
     );
   }

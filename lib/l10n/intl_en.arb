@@ -60,5 +60,6 @@
     "save": "Save",
     "enterLinkPrompt": "Please enter the link to proceed.",
     "linkSavedSuccessfully": "Link saved successfully.",
-    "pleaseEnterValidUrl": "Please enter a valid URL."
+    "pleaseEnterValidUrl": "Please enter a valid URL.",
+    "settings": "Settings"
 }

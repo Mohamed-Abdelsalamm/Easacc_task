@@ -50,10 +50,7 @@ class _MainLayoutState extends State<MainLayout> {
         context.go(AppRoutes.kHomeView);
         break;
       case 1:
-        context.go(AppRoutes.kSetLinkView);
-        break;
-      case 2:
-        context.go(AppRoutes.kHomeView);
+        context.go(AppRoutes.kSettingsView);
         break;
     }
   }
@@ -100,56 +97,19 @@ class _MainLayoutState extends State<MainLayout> {
               ),
               BottomNavigationBarItem(
                 icon: SvgPicture.asset(
-                  Assets.assetsImagesSvgsTicket02,
+                  Assets.assetsImagesSvgsSettings02,
                   width: 24.r,
                 ),
                 activeIcon: SvgPicture.asset(
-                  Assets.assetsImagesSvgsTicket02Active,
+                  Assets.assetsImagesSvgsSettings02,
                   width: 24.r,
                   colorFilter: ColorFilter.mode(
                     AppColors.primary500,
                     BlendMode.srcIn,
                   ),
                 ),
-                label: S.current.setLink,
+                label: S.current.settings,
               ),
-              BottomNavigationBarItem(
-                icon: SvgPicture.asset(
-                  Assets.assetsImagesSvgsNews,
-                  width: 24.r,
-                ),
-                activeIcon: SvgPicture.asset(
-                  Assets.assetsImagesSvgsNewsActive,
-                  width: 24.r,
-                  colorFilter: ColorFilter.mode(
-                    AppColors.primary500,
-                    BlendMode.srcIn,
-                  ),
-                ),
-                label: S.current.home,
-              ),
-              // BottomNavigationBarItem(
-              //   icon: SvgPicture.asset(
-              //     Assets.assetsImagesSvgsChatting01,
-              //     width: 24.r,
-              //   ),
-              //   activeIcon: SvgPicture.asset(
-              //     Assets.assetsImagesSvgsChatting01Active,
-              //     width: 24.r,
-              //   ),
-              //   label: S.current.chats,
-              // ),
-              // BottomNavigationBarItem(
-              //   icon: SvgPicture.asset(
-              //     Assets.assetsImagesSvgsUserCircle,
-              //     width: 24.r,
-              //   ),
-              //   activeIcon: SvgPicture.asset(
-              //     Assets.assetsImagesSvgsUserCircleActive,
-              //     width: 24.r,
-              //   ),
-              //   label: S.current.account,
-              // ),
             ],
           ),
         ),

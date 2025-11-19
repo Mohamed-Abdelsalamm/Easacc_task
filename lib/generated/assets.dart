@@ -86,6 +86,10 @@ class Assets {
   /// assets/images/svgs/news_active.svg
   static const String assetsImagesSvgsNewsActive = "assets/images/svgs/news_active.svg";
 
+  /// Assets for assetsImagesSvgsSettings02
+  /// assets/images/svgs/settings-02.svg
+  static const String assetsImagesSvgsSettings02 = "assets/images/svgs/settings-02.svg";
+
   /// Assets for assetsImagesSvgsSquareLock01
   /// assets/images/svgs/square-lock-01.svg
   static const String assetsImagesSvgsSquareLock01 = "assets/images/svgs/square-lock-01.svg";

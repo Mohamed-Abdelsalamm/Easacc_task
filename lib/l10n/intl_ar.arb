@@ -58,5 +58,6 @@
     "save": "حفظ",
     "enterLinkPrompt": "الرجاء إدخال الرابط للمتابعة.",
     "linkSavedSuccessfully": "تم حفظ الرابط بنجاح.",
-    "pleaseEnterValidUrl": "الرجاء إدخال رابط صالح."
+    "pleaseEnterValidUrl": "الرجاء إدخال رابط صالح.",
+    "settings": "الإعدادات"
 }
