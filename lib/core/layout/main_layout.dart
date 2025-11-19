@@ -91,6 +91,10 @@ class _MainLayoutState extends State<MainLayout> {
                 activeIcon: SvgPicture.asset(
                   Assets.assetsImagesSvgsHome03Active,
                   width: 24.r,
+                  colorFilter: ColorFilter.mode(
+                    AppColors.primary500,
+                    BlendMode.srcIn,
+                  ),
                 ),
                 label: S.current.home,
               ),
@@ -102,6 +106,10 @@ class _MainLayoutState extends State<MainLayout> {
                 activeIcon: SvgPicture.asset(
                   Assets.assetsImagesSvgsTicket02Active,
                   width: 24.r,
+                  colorFilter: ColorFilter.mode(
+                    AppColors.primary500,
+                    BlendMode.srcIn,
+                  ),
                 ),
                 label: S.current.setLink,
               ),
@@ -113,6 +121,10 @@ class _MainLayoutState extends State<MainLayout> {
                 activeIcon: SvgPicture.asset(
                   Assets.assetsImagesSvgsNewsActive,
                   width: 24.r,
+                  colorFilter: ColorFilter.mode(
+                    AppColors.primary500,
+                    BlendMode.srcIn,
+                  ),
                 ),
                 label: S.current.home,
               ),

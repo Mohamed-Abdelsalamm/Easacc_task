@@ -41,6 +41,7 @@ dependencies:
 
   # Local storage
   shared_preferences: ^2.5.3
+  webview_flutter: ^4.0.7
 
 
   flutter_localizations:

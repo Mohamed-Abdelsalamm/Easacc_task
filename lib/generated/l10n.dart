@@ -609,6 +609,66 @@ class S {
       args: [],
     );
   }
+
+  /// `No link configured.`
+  String get noLinkConfigured {
+    return Intl.message(
+      'No link configured.',
+      name: 'noLinkConfigured',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter a link.`
+  String get pleaseEnterUrl {
+    return Intl.message(
+      'Please enter a link.',
+      name: 'pleaseEnterUrl',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Save`
+  String get save {
+    return Intl.message(
+      'Save',
+      name: 'save',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter the link to proceed.`
+  String get enterLinkPrompt {
+    return Intl.message(
+      'Please enter the link to proceed.',
+      name: 'enterLinkPrompt',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Link saved successfully.`
+  String get linkSavedSuccessfully {
+    return Intl.message(
+      'Link saved successfully.',
+      name: 'linkSavedSuccessfully',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter a valid URL.`
+  String get pleaseEnterValidUrl {
+    return Intl.message(
+      'Please enter a valid URL.',
+      name: 'pleaseEnterValidUrl',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

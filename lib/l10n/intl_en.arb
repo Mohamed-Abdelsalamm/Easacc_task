@@ -54,5 +54,11 @@
     "passwordsDoNotMatch": "Passwords do not match",
     "countryValidationError": "Please enter your country",
     "or": "or",
-    "setLink": "Set Link"
+    "setLink": "Set Link",
+    "noLinkConfigured": "No link configured.",
+    "pleaseEnterUrl": "Please enter a link.",
+    "save": "Save",
+    "enterLinkPrompt": "Please enter the link to proceed.",
+    "linkSavedSuccessfully": "Link saved successfully.",
+    "pleaseEnterValidUrl": "Please enter a valid URL."
 }

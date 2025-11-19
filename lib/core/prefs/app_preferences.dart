@@ -11,6 +11,7 @@ class AppPreference {
   static const String keyUserRole = 'user_role';
   static const String keyAppTheme = 'app_theme';
   static const String keyAppLang = 'app_lang';
+  static const String keyHomeLink = 'home_link';
 
   // ==========================
   // 🧠 SINGLETON INSTANCE
@@ -117,5 +118,20 @@ class AppPreference {
     await _prefs.remove(keyUserPhone);
     await _prefs.remove(keyUserRole);
     await _prefs.remove(keyUserEmail);
+  }
+
+  // ==========================
+  // 🌐 HOME / WEB LINK
+  // ==========================
+  static Future<void> setHomeLink(String? link) async {
+    if (link != null) {
+      await _prefs.setString(keyHomeLink, link);
+    }
+  }
+
+  static String? getHomeLink() => _prefs.getString(keyHomeLink) ?? "https://easacc.com/";
+
+  static Future<void> clearHomeLink() async {
+    await _prefs.remove(keyHomeLink);
   }
 }

@@ -52,5 +52,11 @@
     "passwordsDoNotMatch": "كلمات المرور غير متطابقة",
     "countryValidationError": "يرجى إدخال بلدك",
     "or": "أو",
-    "setLink": "تعيين الرابط"
+    "setLink": "تعيين الرابط",
+    "noLinkConfigured": "لا يوجد رابط مكون.",
+    "pleaseEnterUrl": "الرجاء إدخال رابط.",
+    "save": "حفظ",
+    "enterLinkPrompt": "الرجاء إدخال الرابط للمتابعة.",
+    "linkSavedSuccessfully": "تم حفظ الرابط بنجاح.",
+    "pleaseEnterValidUrl": "الرجاء إدخال رابط صالح."
 }

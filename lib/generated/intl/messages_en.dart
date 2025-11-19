@@ -39,6 +39,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Email is required"),
         "emailValidationError":
             MessageLookupByLibrary.simpleMessage("Please enter email"),
+        "enterLinkPrompt": MessageLookupByLibrary.simpleMessage(
+            "Please enter the link to proceed."),
         "fieldRequired":
             MessageLookupByLibrary.simpleMessage("This field is required"),
         "forgotPassword":
@@ -54,6 +56,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Invalid email or password"),
         "invalidPhone":
             MessageLookupByLibrary.simpleMessage("Enter a valid phone number"),
+        "linkSavedSuccessfully":
+            MessageLookupByLibrary.simpleMessage("Link saved successfully."),
         "login": MessageLookupByLibrary.simpleMessage("Login"),
         "loginButton": MessageLookupByLibrary.simpleMessage("Login"),
         "loginFailed": MessageLookupByLibrary.simpleMessage(
@@ -69,6 +73,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Don\'t have an account?"),
         "noInternetConnection":
             MessageLookupByLibrary.simpleMessage("No Internet Connection"),
+        "noLinkConfigured":
+            MessageLookupByLibrary.simpleMessage("No link configured."),
         "or": MessageLookupByLibrary.simpleMessage("or"),
         "otpIsRequired":
             MessageLookupByLibrary.simpleMessage("OTP is required"),
@@ -95,6 +101,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Passwords do not match"),
         "phoneRequired":
             MessageLookupByLibrary.simpleMessage("Phone number is required"),
+        "pleaseEnterUrl":
+            MessageLookupByLibrary.simpleMessage("Please enter a link."),
+        "pleaseEnterValidUrl":
+            MessageLookupByLibrary.simpleMessage("Please enter a valid URL."),
         "privacyPolicy": MessageLookupByLibrary.simpleMessage("Privacy Policy"),
         "receiveTimeout": MessageLookupByLibrary.simpleMessage(
             "Receive timeout with ApiServer"),
@@ -104,6 +114,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Your request not found, Please try later!"),
         "resetPassword": MessageLookupByLibrary.simpleMessage("Reset Password"),
         "retry": MessageLookupByLibrary.simpleMessage("Retry"),
+        "save": MessageLookupByLibrary.simpleMessage("Save"),
         "sendTimeout":
             MessageLookupByLibrary.simpleMessage("Send timeout with ApiServer"),
         "setLink": MessageLookupByLibrary.simpleMessage("Set Link"),

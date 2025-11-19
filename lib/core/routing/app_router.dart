@@ -2,6 +2,7 @@ import 'package:easacc_flutter_task/core/routing/app_routes.dart';
 import 'package:easacc_flutter_task/features/home/presentation/views/home_view.dart';
 import 'package:easacc_flutter_task/features/login/presentation/manager/login_cubit.dart';
 import 'package:easacc_flutter_task/features/login/presentation/views/login_view.dart';
+import 'package:easacc_flutter_task/features/set_link/presentation/views/set_link_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -44,14 +45,14 @@ abstract class AppRouter {
               },
             ),
             GoRoute(
-              path: AppRoutes.kHomeView,
+              path: AppRoutes.kSetLinkView,
               pageBuilder: (context, state) {
                 return CustomTransitionPage(
                   transitionsBuilder: (_, animation, __, child) {
                     return FadeTransition(opacity: animation, child: child);
                   },
                   key: state.pageKey,
-                  child: const HomeView(),
+                  child: const SetLinkView(),
                 );
               },
             ),

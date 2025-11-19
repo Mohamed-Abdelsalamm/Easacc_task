@@ -109,7 +109,7 @@ class Validator {
   }
 
   /// Country
-   static String? validateCountry(String? value) {
+  static String? validateCountry(String? value) {
     if (value == null || value.isEmpty) {
       return S.current.countryValidationError;
     }
@@ -134,6 +134,14 @@ class Validator {
       return S.current.confirmPasswordRequired;
     } else if (originalPassword != null && value != originalPassword) {
       return S.current.passwordsDoNotMatch;
+    }
+    return null;
+  }
+
+  /// validate Link
+  static String? validateLink(String? value) {
+    if (value == null || value.isEmpty) {
+      return S.current.pleaseEnterUrl;
     }
     return null;
   }

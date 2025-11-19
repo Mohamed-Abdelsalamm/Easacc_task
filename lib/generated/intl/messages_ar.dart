@@ -39,6 +39,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("البريد الإلكتروني مطلوب"),
         "emailValidationError": MessageLookupByLibrary.simpleMessage(
             "الرجاء إدخال البريد الإلكتروني"),
+        "enterLinkPrompt": MessageLookupByLibrary.simpleMessage(
+            "الرجاء إدخال الرابط للمتابعة."),
         "fieldRequired":
             MessageLookupByLibrary.simpleMessage("هذا الحقل مطلوب"),
         "forgotPassword":
@@ -54,6 +56,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "البريد الإلكتروني أو كلمة المرور غير صحيحة"),
         "invalidPhone":
             MessageLookupByLibrary.simpleMessage("أدخل رقم هاتف صالح"),
+        "linkSavedSuccessfully":
+            MessageLookupByLibrary.simpleMessage("تم حفظ الرابط بنجاح."),
         "loginButton": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
         "loginFailed": MessageLookupByLibrary.simpleMessage(
             "فشل تسجيل الدخول، يرجى المحاولة مرة أخرى"),
@@ -67,6 +71,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ما عندك حساب؟"),
         "noInternetConnection":
             MessageLookupByLibrary.simpleMessage("لا يوجد اتصال بالإنترنت"),
+        "noLinkConfigured":
+            MessageLookupByLibrary.simpleMessage("لا يوجد رابط مكون."),
         "or": MessageLookupByLibrary.simpleMessage("أو"),
         "otpMustBeFourDigits": MessageLookupByLibrary.simpleMessage(
             "يجب أن يكون رمز التحقق مكونًا من 4 أرقام"),
@@ -91,6 +97,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("كلمات المرور غير متطابقة"),
         "phoneRequired":
             MessageLookupByLibrary.simpleMessage("رقم الهاتف مطلوب"),
+        "pleaseEnterUrl":
+            MessageLookupByLibrary.simpleMessage("الرجاء إدخال رابط."),
+        "pleaseEnterValidUrl":
+            MessageLookupByLibrary.simpleMessage("الرجاء إدخال رابط صالح."),
         "privacyPolicy": MessageLookupByLibrary.simpleMessage("سياسة الخصوصية"),
         "receiveTimeout": MessageLookupByLibrary.simpleMessage(
             "انتهت مهلة الاستلام مع خادم API"),
@@ -101,6 +111,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "resetPassword":
             MessageLookupByLibrary.simpleMessage("إعادة تعيين كلمة المرور"),
         "retry": MessageLookupByLibrary.simpleMessage("إعادة المحاولة"),
+        "save": MessageLookupByLibrary.simpleMessage("حفظ"),
         "sendTimeout": MessageLookupByLibrary.simpleMessage(
             "انتهت مهلة الإرسال مع خادم API"),
         "setLink": MessageLookupByLibrary.simpleMessage("تعيين الرابط"),
