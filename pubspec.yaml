@@ -41,7 +41,12 @@ dependencies:
 
   # Local storage
   shared_preferences: ^2.5.3
-  webview_flutter: ^4.0.7
+  webview_flutter: ^4.13.0
+  # Device discovery
+  multicast_dns: ^0.3.3
+  flutter_blue_plus: ^2.0.2
+  network_info_plus: ^7.0.0
+  permission_handler: ^12.0.1
 
 
   flutter_localizations:
@@ -102,3 +107,7 @@ icons_launcher:
 
 flutter_intl:
   enabled: true
+
+dependency_overrides:
+  permission_handler: 12.0.1
+  permission_handler_android: 13.0.1

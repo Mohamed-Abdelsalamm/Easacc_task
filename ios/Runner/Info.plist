@@ -45,5 +45,20 @@
 	<true/>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
+	
+	<!-- Permissions required for local network and Bluetooth device discovery -->
+	<key>NSBluetoothAlwaysUsageDescription</key>
+	<string>Required to discover nearby Bluetooth devices such as printers.</string>
+	<key>NSBluetoothPeripheralUsageDescription</key>
+	<string>Required to connect to Bluetooth peripherals for printing.</string>
+	<key>NSLocalNetworkUsageDescription</key>
+	<string>Required to discover devices on your local network (printers, scanners).</string>
+	<!-- Advertised Bonjour services the app may discover -->
+	<key>NSBonjourServices</key>
+	<array>
+		<string>_ipp._tcp</string>
+		<string>_printer._tcp</string>
+		<string>_http._tcp</string>
+	</array>
 </dict>
 </plist>

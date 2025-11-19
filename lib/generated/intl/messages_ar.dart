@@ -24,6 +24,8 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "addressRequired":
             MessageLookupByLibrary.simpleMessage("العنوان مطلوب"),
+        "availableNetworkDevices":
+            MessageLookupByLibrary.simpleMessage("الأجهزة المتاحة على الشبكة"),
         "confirmPasswordRequired":
             MessageLookupByLibrary.simpleMessage("تأكيد كلمة المرور مطلوب"),
         "connectionTimeout": MessageLookupByLibrary.simpleMessage(
@@ -41,6 +43,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "الرجاء إدخال البريد الإلكتروني"),
         "enterLinkPrompt": MessageLookupByLibrary.simpleMessage(
             "الرجاء إدخال الرابط للمتابعة."),
+        "failedToDiscoverDevices":
+            MessageLookupByLibrary.simpleMessage("فشل في اكتشاف الأجهزة"),
         "fieldRequired":
             MessageLookupByLibrary.simpleMessage("هذا الحقل مطلوب"),
         "forgotPassword":
@@ -69,6 +73,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "nameRequired": MessageLookupByLibrary.simpleMessage("الاسم مطلوب"),
         "noAccountPrompt":
             MessageLookupByLibrary.simpleMessage("ما عندك حساب؟"),
+        "noDevicesFound":
+            MessageLookupByLibrary.simpleMessage("لم يتم العثور على أجهزة."),
+        "noDevicesFoundMessage": MessageLookupByLibrary.simpleMessage(
+            "يرجى التحقق من:\n• البلوتوث مفعّل\n• خدمات الموقع مفعّلة\n• الأجهزة قريبة ومشغّلة\n• طابعات الواي فاي على نفس الشبكة\n\nاضغط على \"تحديث الأجهزة\" للمسح مرة أخرى."),
         "noInternetConnection":
             MessageLookupByLibrary.simpleMessage("لا يوجد اتصال بالإنترنت"),
         "noLinkConfigured":
@@ -95,6 +103,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("الرجاء إدخال كلمة المرور"),
         "passwordsDoNotMatch":
             MessageLookupByLibrary.simpleMessage("كلمات المرور غير متطابقة"),
+        "permissionsRequired":
+            MessageLookupByLibrary.simpleMessage("الأذونات مطلوبة"),
+        "permissionsRequiredMessage": MessageLookupByLibrary.simpleMessage(
+            "يرجى منح الأذونات المطلوبة:\n• تفعيل خدمة الموقع (مطلوبة لمسح البلوتوث)\n• تفعيل خدمة البلوتوث\n\nاضغط على \"تحديث الأجهزة\" للمحاولة مرة أخرى."),
         "phoneRequired":
             MessageLookupByLibrary.simpleMessage("رقم الهاتف مطلوب"),
         "pleaseEnterUrl":
@@ -104,6 +116,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "privacyPolicy": MessageLookupByLibrary.simpleMessage("سياسة الخصوصية"),
         "receiveTimeout": MessageLookupByLibrary.simpleMessage(
             "انتهت مهلة الاستلام مع خادم API"),
+        "refresh": MessageLookupByLibrary.simpleMessage("تحديث"),
         "requestCanceled":
             MessageLookupByLibrary.simpleMessage("تم إلغاء الطلب إلى خادم API"),
         "requestNotFound": MessageLookupByLibrary.simpleMessage(
@@ -112,6 +125,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("إعادة تعيين كلمة المرور"),
         "retry": MessageLookupByLibrary.simpleMessage("إعادة المحاولة"),
         "save": MessageLookupByLibrary.simpleMessage("حفظ"),
+        "selectedId": MessageLookupByLibrary.simpleMessage("المعرف المحدد"),
         "sendTimeout": MessageLookupByLibrary.simpleMessage(
             "انتهت مهلة الإرسال مع خادم API"),
         "setLink": MessageLookupByLibrary.simpleMessage("تعيين الرابط"),

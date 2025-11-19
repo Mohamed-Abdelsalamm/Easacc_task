@@ -5,6 +5,7 @@ import 'package:easacc_flutter_task/features/login/data/repo/login_repo.dart';
 import 'package:easacc_flutter_task/features/login/data/repo/login_repo_impl.dart';
 import 'package:easacc_flutter_task/features/login/presentation/manager/login_cubit.dart';
 import 'package:easacc_flutter_task/features/settings/presentation/manager/set_link_cubit.dart';
+import 'package:easacc_flutter_task/features/settings/presentation/manager/devices_cubit.dart';
 import 'package:easacc_flutter_task/features/home/presentation/manager/home_cubit.dart';
 import 'package:get_it/get_it.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
@@ -32,5 +33,6 @@ void setupServiceLocator() {
   getIt.registerSingleton<LoginRepo>(LoginRepoImpl(getIt.get<ApiService>()));
   getIt.registerFactory<LoginCubit>(() => LoginCubit(getIt.get<LoginRepo>()));
   getIt.registerFactory<SetLinkCubit>(() => SetLinkCubit());
+  getIt.registerFactory<DevicesCubit>(() => DevicesCubit());
   getIt.registerFactory<HomeCubit>(() => HomeCubit());
 }

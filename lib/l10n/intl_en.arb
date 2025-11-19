@@ -61,5 +61,13 @@
     "enterLinkPrompt": "Please enter the link to proceed.",
     "linkSavedSuccessfully": "Link saved successfully.",
     "pleaseEnterValidUrl": "Please enter a valid URL.",
-    "settings": "Settings"
+    "settings": "Settings",
+    "availableNetworkDevices": "Available Network Devices",
+    "selectedId": "Selected ID",
+    "refresh": "Refresh",
+    "permissionsRequired": "Permissions Required",
+    "permissionsRequiredMessage": "Please grant the required permissions:\n• Enable Location Service (required for Bluetooth scanning)\n• Enable Bluetooth Service\n\nTap \"Refresh Devices\" to try again.",
+    "noDevicesFound": "No devices found.",
+    "noDevicesFoundMessage": "Please check:\n• Bluetooth is turned ON\n• Location services are enabled\n• Devices are nearby and powered on\n• Wi-Fi printers are on the same network\n\nTap \"Refresh Devices\" to scan again.",
+    "failedToDiscoverDevices": "Failed to discover devices"
 }

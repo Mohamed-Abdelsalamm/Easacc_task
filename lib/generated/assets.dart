@@ -58,6 +58,10 @@ class Assets {
   /// assets/images/svgs/arrow-right-02.svg
   static const String assetsImagesSvgsArrowRight02 = "assets/images/svgs/arrow-right-02.svg";
 
+  /// Assets for assetsImagesSvgsEarth
+  /// assets/images/svgs/earth.svg
+  static const String assetsImagesSvgsEarth = "assets/images/svgs/earth.svg";
+
   /// Assets for assetsImagesSvgsFacebookLogin
   /// assets/images/svgs/facebook_login.svg
   static const String assetsImagesSvgsFacebookLogin = "assets/images/svgs/facebook_login.svg";

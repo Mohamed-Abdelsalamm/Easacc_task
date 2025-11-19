@@ -42,7 +42,7 @@ class MainApp extends StatelessWidget {
                 GlobalCupertinoLocalizations.delegate,
               ],
               supportedLocales: S.delegate.supportedLocales,
-              locale: Locale("en"),
+              locale: Locale(state.selectedLanguage),
               theme: lightThemeData,
               routerConfig: router,
               debugShowCheckedModeBanner: false,

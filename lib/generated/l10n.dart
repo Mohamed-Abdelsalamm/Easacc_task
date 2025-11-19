@@ -679,6 +679,86 @@ class S {
       args: [],
     );
   }
+
+  /// `Available Network Devices`
+  String get availableNetworkDevices {
+    return Intl.message(
+      'Available Network Devices',
+      name: 'availableNetworkDevices',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Selected ID`
+  String get selectedId {
+    return Intl.message(
+      'Selected ID',
+      name: 'selectedId',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Refresh`
+  String get refresh {
+    return Intl.message(
+      'Refresh',
+      name: 'refresh',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Permissions Required`
+  String get permissionsRequired {
+    return Intl.message(
+      'Permissions Required',
+      name: 'permissionsRequired',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please grant the required permissions:\n• Enable Location Service (required for Bluetooth scanning)\n• Enable Bluetooth Service\n\nTap "Refresh Devices" to try again.`
+  String get permissionsRequiredMessage {
+    return Intl.message(
+      'Please grant the required permissions:\n• Enable Location Service (required for Bluetooth scanning)\n• Enable Bluetooth Service\n\nTap "Refresh Devices" to try again.',
+      name: 'permissionsRequiredMessage',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No devices found.`
+  String get noDevicesFound {
+    return Intl.message(
+      'No devices found.',
+      name: 'noDevicesFound',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please check:\n• Bluetooth is turned ON\n• Location services are enabled\n• Devices are nearby and powered on\n• Wi-Fi printers are on the same network\n\nTap "Refresh Devices" to scan again.`
+  String get noDevicesFoundMessage {
+    return Intl.message(
+      'Please check:\n• Bluetooth is turned ON\n• Location services are enabled\n• Devices are nearby and powered on\n• Wi-Fi printers are on the same network\n\nTap "Refresh Devices" to scan again.',
+      name: 'noDevicesFoundMessage',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Failed to discover devices`
+  String get failedToDiscoverDevices {
+    return Intl.message(
+      'Failed to discover devices',
+      name: 'failedToDiscoverDevices',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

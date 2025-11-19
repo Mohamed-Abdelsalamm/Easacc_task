@@ -24,6 +24,8 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "addressRequired":
             MessageLookupByLibrary.simpleMessage("Address is required"),
+        "availableNetworkDevices":
+            MessageLookupByLibrary.simpleMessage("Available Network Devices"),
         "confirmPasswordRequired": MessageLookupByLibrary.simpleMessage(
             "Confirm Password is required"),
         "connectionTimeout": MessageLookupByLibrary.simpleMessage(
@@ -41,6 +43,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Please enter email"),
         "enterLinkPrompt": MessageLookupByLibrary.simpleMessage(
             "Please enter the link to proceed."),
+        "failedToDiscoverDevices":
+            MessageLookupByLibrary.simpleMessage("Failed to discover devices"),
         "fieldRequired":
             MessageLookupByLibrary.simpleMessage("This field is required"),
         "forgotPassword":
@@ -71,6 +75,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Name is required"),
         "noAccountPrompt":
             MessageLookupByLibrary.simpleMessage("Don\'t have an account?"),
+        "noDevicesFound":
+            MessageLookupByLibrary.simpleMessage("No devices found."),
+        "noDevicesFoundMessage": MessageLookupByLibrary.simpleMessage(
+            "Please check:\n• Bluetooth is turned ON\n• Location services are enabled\n• Devices are nearby and powered on\n• Wi-Fi printers are on the same network\n\nTap \"Refresh Devices\" to scan again."),
         "noInternetConnection":
             MessageLookupByLibrary.simpleMessage("No Internet Connection"),
         "noLinkConfigured":
@@ -99,6 +107,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Please enter password"),
         "passwordsDoNotMatch":
             MessageLookupByLibrary.simpleMessage("Passwords do not match"),
+        "permissionsRequired":
+            MessageLookupByLibrary.simpleMessage("Permissions Required"),
+        "permissionsRequiredMessage": MessageLookupByLibrary.simpleMessage(
+            "Please grant the required permissions:\n• Enable Location Service (required for Bluetooth scanning)\n• Enable Bluetooth Service\n\nTap \"Refresh Devices\" to try again."),
         "phoneRequired":
             MessageLookupByLibrary.simpleMessage("Phone number is required"),
         "pleaseEnterUrl":
@@ -108,6 +120,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "privacyPolicy": MessageLookupByLibrary.simpleMessage("Privacy Policy"),
         "receiveTimeout": MessageLookupByLibrary.simpleMessage(
             "Receive timeout with ApiServer"),
+        "refresh": MessageLookupByLibrary.simpleMessage("Refresh"),
         "requestCanceled": MessageLookupByLibrary.simpleMessage(
             "Request to ApiServer was canceled"),
         "requestNotFound": MessageLookupByLibrary.simpleMessage(
@@ -115,6 +128,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "resetPassword": MessageLookupByLibrary.simpleMessage("Reset Password"),
         "retry": MessageLookupByLibrary.simpleMessage("Retry"),
         "save": MessageLookupByLibrary.simpleMessage("Save"),
+        "selectedId": MessageLookupByLibrary.simpleMessage("Selected ID"),
         "sendTimeout":
             MessageLookupByLibrary.simpleMessage("Send timeout with ApiServer"),
         "setLink": MessageLookupByLibrary.simpleMessage("Set Link"),
